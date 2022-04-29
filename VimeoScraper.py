@@ -44,8 +44,10 @@ def main():
                         if file_name:
                             with open(file_name + '.mp4', 'wb') as f:
                                 f.write(video.content)
+                            
+                                       
                             st.success('Video saved to disk')
-                    
+                            st.write('File saved to: ' + os.getcwd())
                     
 
 
