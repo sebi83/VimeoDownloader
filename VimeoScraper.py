@@ -35,22 +35,10 @@ def main():
                         vod = vod[0]
                         mp4 = 'https://vod-progressive' + vod + '.mp4'
                         video = requests.get(mp4)
-                    
-                        file_name = st.text_input(
-                            label='To save the file, enter name you want ❗without❗ extension and press ENTER:')
-                        #download and save to disk with mp4 extension and file name
-                        #ask what directory to save -> todo
                         
-                        if file_name:
-                            with open(file_name + '.mp4', 'wb') as f:
-                                f.write(video.content)
-                            
-                                       
-                            st.success('Video saved to disk')
-                            st.write('File saved to: ' + os.getcwd())
-                    
-
-
+                        st.video(video.content)
+                        st.header("To download the video - Right Click on the Video & Save")
+                        
                 else:
                     st.error('This is not a vimeo video.☠️')
             else:
