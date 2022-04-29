@@ -5,7 +5,7 @@ To run:
 
 ```bash
 pip install -r requirements.txt
-streamlit run VimeoDownloader.py
+streamlit run VimeoScraper.py
 ```
 
 
